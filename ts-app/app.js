@@ -51,3 +51,17 @@ var totalStringLit = totalLit("Ali", " Mohammadi", "isString");
 var joeAge = 23;
 var joeJob = "teacher";
 console.log(joeAge, joeJob);
+/**
+ * 15-function-return-type
+ */
+// number type
+function functionTypeNumber() {
+    return 12;
+}
+// void type
+function funcTypeVoid() {
+    console.log("function with type void");
+}
+/**
+ *
+ */

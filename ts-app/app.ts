@@ -77,3 +77,20 @@ const joeAge: combine = 23;
 const joeJob: ageType = "teacher";
 
 console.log(joeAge, joeJob);
+
+/**
+ * 15-function-return-type
+ */
+
+// number type
+function functionTypeNumber(): number {
+  return 12;
+}
+// void type
+function funcTypeVoid(): void {
+  console.log("function with type void");
+}
+
+/**
+ *
+ */
