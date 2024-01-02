@@ -120,4 +120,16 @@ function getProduct(
 
 // getProduct("mobile", 23, (a, b) => console.log(a, b)); // -> mobile 23
 
+/** ----------------
+ * 18-unknown-type
+ */
 
+let inputUnk: unknown;
+let courseStr: string;
+
+inputUnk = 23;
+inputUnk = "js";
+
+if (typeof inputUnk === "string") {
+  courseStr = inputUnk;
+}

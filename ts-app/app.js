@@ -79,3 +79,13 @@ function getProduct(nameProduct, priceProduct, cb) {
     cb(nameProduct, priceProduct);
 }
 // getProduct("mobile", 23, (a, b) => console.log(a, b)); // -> mobile 23
+/** ----------------
+ * 18-unknown-type
+ */
+var inputUnk;
+var courseStr;
+inputUnk = 23;
+inputUnk = "js";
+if (typeof inputUnk === "string") {
+    courseStr = inputUnk;
+}
