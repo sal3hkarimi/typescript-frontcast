@@ -76,7 +76,7 @@ type ageType = "toctor" | "teacher";
 const joeAge: combine = 23;
 const joeJob: ageType = "teacher";
 
-console.log(joeAge, joeJob);
+// console.log(joeAge, joeJob);
 
 /**
  * 15-function-return-type
@@ -98,7 +98,7 @@ function typeVoidMethod(): void {
 // let combine = Function;
 let combine: (name: string, age: number) => string;
 
-function student(name, age) {
+function student(name: string, age: number) {
   return `${name}: ${age}`;
 }
 
@@ -133,3 +133,4 @@ inputUnk = "js";
 if (typeof inputUnk === "string") {
   courseStr = inputUnk;
 }
+

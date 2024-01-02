@@ -1,3 +1,4 @@
+"use strict";
 /**
  * 10-enums
  */
@@ -7,7 +8,7 @@ var Color;
     Color[Color["RED"] = 1] = "RED";
     Color[Color["GREEN"] = 2] = "GREEN";
 })(Color || (Color = {}));
-var product = {
+const product = {
     title: "book",
     price: 23,
     discount: ["atm", "smr"],
@@ -18,7 +19,7 @@ var product = {
  * 12-union-types
  */
 function total(input_1, input_2) {
-    var result;
+    let result;
     if (typeof input_1 === "number" && typeof input_2 === "number") {
         result = input_1 + input_2;
     }
@@ -27,8 +28,8 @@ function total(input_1, input_2) {
     }
     return result;
 }
-var totalNumber = total(12, 5);
-var totalString = total("Ali", " Mohammadi");
+const totalNumber = total(12, 5);
+const totalString = total("Ali", " Mohammadi");
 // console.log(totalNumber);
 // console.log(totalString);
 /**
@@ -36,7 +37,7 @@ var totalString = total("Ali", " Mohammadi");
  */
 function totalLit(input_1, input_2, resultType // literal-types
 ) {
-    var result;
+    let result;
     if ((typeof input_1 === "number" && typeof input_2 === "number") ||
         resultType === "isNumber") {
         result = +input_1 + +input_2;
@@ -46,11 +47,11 @@ function totalLit(input_1, input_2, resultType // literal-types
     }
     return result;
 }
-var totalNumberLit = totalLit(12, 5, "isNumber");
-var totalStringLit = totalLit("Ali", " Mohammadi", "isString");
-var joeAge = 23;
-var joeJob = "teacher";
-console.log(joeAge, joeJob);
+const totalNumberLit = totalLit(12, 5, "isNumber");
+const totalStringLit = totalLit("Ali", " Mohammadi", "isString");
+const joeAge = 23;
+const joeJob = "teacher";
+// console.log(joeAge, joeJob);
 /**
  * 15-function-return-type
  */
@@ -66,9 +67,9 @@ function typeVoidMethod() {
  * 16-functions-type
  */
 // let combine = Function;
-var combine;
+let combine;
 function student(name, age) {
-    return "".concat(name, ": ").concat(age);
+    return `${name}: ${age}`;
 }
 combine = student;
 // console.log(combine("sal3h", 333));
@@ -82,8 +83,8 @@ function getProduct(nameProduct, priceProduct, cb) {
 /** ----------------
  * 18-unknown-type
  */
-var inputUnk;
-var courseStr;
+let inputUnk;
+let courseStr;
 inputUnk = 23;
 inputUnk = "js";
 if (typeof inputUnk === "string") {
