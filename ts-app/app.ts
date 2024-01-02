@@ -83,15 +83,15 @@ console.log(joeAge, joeJob);
  */
 
 // number type
-function functionTypeNumber(): number {
+function typeNumberMethod(): number {
   return 12;
 }
 // void type
-function funcTypeVoid(): void {
+function typeVoidMethod(): void {
   console.log("function with type void");
 }
 
-/**
+/** ----------------
  * 16-functions-type
  */
 
@@ -104,4 +104,20 @@ function student(name, age) {
 
 combine = student;
 
-console.log(combine("azim", 333));
+// console.log(combine("sal3h", 333));
+
+/** ----------------
+ * 17-callbacks
+ */
+
+function getProduct(
+  nameProduct: string,
+  priceProduct: number,
+  cb: (np: string, pp: number) => void
+) {
+  cb(nameProduct, priceProduct);
+}
+
+// getProduct("mobile", 23, (a, b) => console.log(a, b)); // -> mobile 23
+
+
