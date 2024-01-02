@@ -92,5 +92,16 @@ function funcTypeVoid(): void {
 }
 
 /**
- *
+ * 16-functions-type
  */
+
+// let combine = Function;
+let combine: (name: string, age: number) => string;
+
+function student(name, age) {
+  return `${name}: ${age}`;
+}
+
+combine = student;
+
+console.log(combine("azim", 333));

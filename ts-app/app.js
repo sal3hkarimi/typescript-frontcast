@@ -63,5 +63,12 @@ function funcTypeVoid() {
     console.log("function with type void");
 }
 /**
- *
+ * 16-functions-type
  */
+// let combine = Function;
+var combine;
+function student(name, age) {
+    return "".concat(name, ": ").concat(age);
+}
+combine = student;
+console.log(combine("azim", 333));
