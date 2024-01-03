@@ -3,14 +3,18 @@
  * 25-creating-class
  * 27-this-keyword
  * 28-private-and-public-access
+ * 29-shorthand-initialization
  */
 class Team {
-    constructor(nameTeam) {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
         this.members = [];
-        this.name = nameTeam;
+        this.id = id;
+        this.name = name;
     }
     describe() {
-        console.log(`Team: ${this.name}`);
+        console.log(`Team: ${this.id}-${this.name}`);
     }
     addMember(member) {
         this.members.push(member);
@@ -20,11 +24,11 @@ class Team {
         console.log(this.members);
     }
 }
-const devTeam = new Team("Developer");
-// devTeam.describe();
+const devTeam = new Team("t1", "Developer");
+devTeam.describe();
 devTeam.addMember("Mohammad");
 devTeam.addMember("Joe");
 // devTeam.members[5] = "ali" // -> Error: Property 'members' is private and only accessible within class 'Team'.
-devTeam.memberInfo();
+// devTeam.memberInfo();
 const uiTeam = { name: "UI", describe: devTeam.describe };
 // uiTeam.describe();
