@@ -51,4 +51,4 @@ class SportsCar implements Car {
 
 const mySportsCar = new SportsCar("Ferrari", "458 Italia", 2022, 200);
 
-mySportsCar.accelerate();
+// mySportsCar.accelerate();
