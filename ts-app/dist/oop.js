@@ -58,6 +58,7 @@ frontTeam.addMember("user-1");
 // -------------------------------------------------
 /**
  * 33-getters
+ * 34-setters
  */
 class UiTeam extends Team {
     constructor(id, reports) {
@@ -75,7 +76,18 @@ class UiTeam extends Team {
         }
         throw new Error("No report found.");
     }
+    set recentReport(value) {
+        if (!value) {
+            throw new Error("You must set value!");
+        }
+        this.addReport(value);
+    }
+    printReports() {
+        console.log(this.reports);
+    }
 }
 const uiUxTeam = new UiTeam("uu1", []);
-uiUxTeam.addReport('new report');
+uiUxTeam.recentReport = "report-1";
 console.log(uiUxTeam.recentReport); // -> new report
+uiUxTeam.recentReport = "report-2";
+uiUxTeam.printReports();
