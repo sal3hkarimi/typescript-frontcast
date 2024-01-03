@@ -16,12 +16,12 @@ function addTodDom(content: string, id: string) {
   };
 }
 
-@addTodDom("<h2>Product Object</h2>", "app")
-class Product {
+// @addTodDom("<h2>Product Object</h2>", "app")
+class ProductCart {
   title = "Book";
   constructor() {
-    console.log("Create Product class");
+    console.log("Create ProductCart class");
   }
 }
 
-const prd = new Product();
+// const prd = new ProductCart();
