@@ -34,3 +34,15 @@ devTeam.addMember("Joe");
 // devTeam.memberInfo();
 const uiTeam = { name: "UI", describe: devTeam.describe };
 // uiTeam.describe();
+// -------------------------------------------------------------------
+/**
+ * 31-inheritance
+ */
+class DevTeam extends Team {
+    constructor(id, admins) {
+        super("d1", "Develop Team");
+        this.admins = admins;
+    }
+}
+const frontTeam = new DevTeam("ft1", ["Mohammad"]);
+console.log(frontTeam);
