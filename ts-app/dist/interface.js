@@ -9,4 +9,16 @@ const mobile = {
         console.log(`${describe}: ${this.price}`);
     },
 };
-mobile.productInfo('info');
+class SportsCar {
+    constructor(brand, model, year, speed) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.speed = speed;
+    }
+    accelerate() {
+        console.log(`The ${this.year} ${this.brand} ${this.model} is accelerating.`);
+    }
+}
+const mySportsCar = new SportsCar("Ferrari", "458 Italia", 2022, 200);
+mySportsCar.accelerate();

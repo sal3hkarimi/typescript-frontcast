@@ -17,4 +17,38 @@ const mobile: Product = {
   },
 };
 
-mobile.productInfo('info')
+// mobile.productInfo('info')
+
+/** -------------------------
+ * 39-interfaces-with-classes
+ */
+
+interface Car {
+  brand: string;
+  model: string;
+  year: number;
+}
+
+class SportsCar implements Car {
+  brand: string;
+  model: string;
+  year: number;
+  speed: number;
+
+  constructor(brand: string, model: string, year: number, speed: number) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+    this.speed = speed;
+  }
+
+  accelerate() {
+    console.log(
+      `The ${this.year} ${this.brand} ${this.model} is accelerating.`
+    );
+  }
+}
+
+const mySportsCar = new SportsCar("Ferrari", "458 Italia", 2022, 200);
+
+mySportsCar.accelerate();
