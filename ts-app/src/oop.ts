@@ -74,6 +74,7 @@ frontTeam.addMember("user-1");
 /**
  * 33-getters
  * 34-setters
+ * 35-static-methods
  */
 
 class UiTeam extends Team {
@@ -108,10 +109,17 @@ class UiTeam extends Team {
   printReports() {
     console.log(this.reports);
   }
+
+  static createName(name: string) {
+    return { name };
+  }
 }
 
 const uiUxTeam = new UiTeam("uu1", []);
 uiUxTeam.recentReport = "report-1";
-console.log(uiUxTeam.recentReport); // -> new report
+// console.log(uiUxTeam.recentReport); // -> new report
 uiUxTeam.recentReport = "report-2";
-uiUxTeam.printReports();
+// uiUxTeam.printReports();
+
+const crName = UiTeam.createName("name");
+console.log(crName);
