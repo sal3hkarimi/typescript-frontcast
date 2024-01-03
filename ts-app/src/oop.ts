@@ -7,7 +7,7 @@
  */
 
 class Team {
-  private members: string[] = [];
+  protected members: string[] = [];
 
   constructor(private readonly id: string, public name: string) {
     this.id = id;
@@ -30,7 +30,7 @@ class Team {
 }
 
 const devTeam = new Team("t1", "Developer");
-devTeam.describe();
+// devTeam.describe();
 
 devTeam.addMember("Mohammad");
 devTeam.addMember("Joe");
@@ -44,6 +44,7 @@ const uiTeam = { name: "UI", describe: devTeam.describe };
 
 /**
  * 31-inheritance
+ * 32-protected-modifier
  */
 
 class DevTeam extends Team {
@@ -53,7 +54,17 @@ class DevTeam extends Team {
     super("d1", "Develop Team");
     this.admins = admins;
   }
+
+  addMember(name: string) {
+    if (name === "admin") {
+      return console.error("You con't add 'admin' to members!");
+    }
+
+    this.members.push(name);
+  }
 }
 
 const frontTeam = new DevTeam("ft1", ["Mohammad"]);
-console.log(frontTeam);
+// frontTeam.addMember("admin");
+frontTeam.addMember("user-1");
+// frontTeam.memberInfo()

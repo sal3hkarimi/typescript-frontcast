@@ -27,7 +27,7 @@ class Team {
     }
 }
 const devTeam = new Team("t1", "Developer");
-devTeam.describe();
+// devTeam.describe();
 devTeam.addMember("Mohammad");
 devTeam.addMember("Joe");
 // devTeam.members[5] = "ali" // -> Error: Property 'members' is private and only accessible within class 'Team'.
@@ -37,12 +37,21 @@ const uiTeam = { name: "UI", describe: devTeam.describe };
 // -------------------------------------------------------------------
 /**
  * 31-inheritance
+ * 32-protected-modifier
  */
 class DevTeam extends Team {
     constructor(id, admins) {
         super("d1", "Develop Team");
         this.admins = admins;
     }
+    addMember(name) {
+        if (name === "admin") {
+            return console.error("You con't add 'admin' to members!");
+        }
+        this.members.push(name);
+    }
 }
 const frontTeam = new DevTeam("ft1", ["Mohammad"]);
-console.log(frontTeam);
+// frontTeam.addMember("admin");
+frontTeam.addMember("user-1");
+// frontTeam.memberInfo()
