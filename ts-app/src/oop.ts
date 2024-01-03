@@ -68,3 +68,36 @@ const frontTeam = new DevTeam("ft1", ["Mohammad"]);
 // frontTeam.addMember("admin");
 frontTeam.addMember("user-1");
 // frontTeam.memberInfo()
+
+// -------------------------------------------------
+
+/**
+ * 33-getters
+ */
+
+class UiTeam extends Team {
+  private lastReport: string;
+  constructor(id: string, private reports: string[]) {
+    super(id, "UI Team");
+
+    this.lastReport = reports[0];
+  }
+
+  addReport(content: string) {
+    this.reports.push(content);
+    this.lastReport = content;
+  }
+
+  get recentReport() {
+    if (this.lastReport) {
+      return this.lastReport;
+    }
+
+    throw new Error("No report found.");
+  }
+}
+
+const uiUxTeam = new UiTeam("uu1", []);
+uiUxTeam.addReport('new report')
+console.log(uiUxTeam.recentReport); // -> new report
+
