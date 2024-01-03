@@ -3,12 +3,13 @@
  * 27-this-keyword
  * 28-private-and-public-access
  * 29-shorthand-initialization
+ * 30-readonly-properties
  */
 
 class Team {
   private members: string[] = [];
 
-  constructor(private id: string, public name: string) {
+  constructor(private readonly id: string, public name: string) {
     this.id = id;
     this.name = name;
   }
@@ -18,6 +19,7 @@ class Team {
   }
 
   addMember(member: string) {
+    // this.id = Math.random() // -> error TS2540: Cannot assign to 'id' because it is a read-only property.
     this.members.push(member);
   }
 
