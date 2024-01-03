@@ -128,6 +128,7 @@ const crName = UiTeam.createName("name");
 
 /**
  * 36-abstract-classes
+ * 37-private-constructors
  */
 
 type storageType = 64 | 128 | 256;
@@ -143,11 +144,24 @@ abstract class SmartPhone {
 }
 
 class Mobile extends SmartPhone {
-  constructor() {
+  private static instance: Mobile;
+
+  private constructor() {
     super("Mobile");
+  }
+
+  static getInstance() {
+    if (this.instance) {
+      return this.instance;
+    }
+
+    this.instance = new Mobile();
+    return this.instance;
   }
 
   storage(): storageType {
     return 128;
   }
 }
+
+const newMobile = Mobile.getInstance();

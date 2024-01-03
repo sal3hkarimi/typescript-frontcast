@@ -105,7 +105,15 @@ class Mobile extends SmartPhone {
     constructor() {
         super("Mobile");
     }
+    static getInstance() {
+        if (this.instance) {
+            return this.instance;
+        }
+        this.instance = new Mobile();
+        return this.instance;
+    }
     storage() {
         return 128;
     }
 }
+const newMobile = Mobile.getInstance();
