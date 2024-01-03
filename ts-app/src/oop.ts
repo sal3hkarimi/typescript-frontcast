@@ -122,4 +122,32 @@ uiUxTeam.recentReport = "report-2";
 // uiUxTeam.printReports();
 
 const crName = UiTeam.createName("name");
-console.log(crName);
+// console.log(crName);
+
+// ---------------------------------------
+
+/**
+ * 36-abstract-classes
+ */
+
+type storageType = 64 | 128 | 256;
+
+abstract class SmartPhone {
+  nameSP: string;
+
+  constructor(name: string) {
+    this.nameSP = name;
+  }
+
+  abstract storage(): storageType;
+}
+
+class Mobile extends SmartPhone {
+  constructor() {
+    super("Mobile");
+  }
+
+  storage(): storageType {
+    return 128;
+  }
+}

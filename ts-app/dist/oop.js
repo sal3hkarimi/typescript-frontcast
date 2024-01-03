@@ -96,4 +96,16 @@ uiUxTeam.recentReport = "report-1";
 uiUxTeam.recentReport = "report-2";
 // uiUxTeam.printReports();
 const crName = UiTeam.createName("name");
-console.log(crName);
+class SmartPhone {
+    constructor(name) {
+        this.nameSP = name;
+    }
+}
+class Mobile extends SmartPhone {
+    constructor() {
+        super("Mobile");
+    }
+    storage() {
+        return 128;
+    }
+}
