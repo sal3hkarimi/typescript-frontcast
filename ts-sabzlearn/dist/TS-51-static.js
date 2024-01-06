@@ -15,7 +15,7 @@ class StudentS {
         return StudentS._studentsList;
     }
 }
-const aliStudent = new StudentS("Ali", "ali@gmail.com");
-const mmdPerson = new StudentS("Mohammad", "mmd@gmail.com");
-const amirPerson = new StudentS("Amir", "amir@gmail.com");
+// const aliStudent = new StudentS("Ali", "ali@gmail.com");
+// const mmdPerson = new StudentS("Mohammad", "mmd@gmail.com");
+// const amirPerson = new StudentS("Amir", "amir@gmail.com");
 console.log(StudentS.studentsList()); // -> ['Ali', 'Mohammad', 'Amir']
