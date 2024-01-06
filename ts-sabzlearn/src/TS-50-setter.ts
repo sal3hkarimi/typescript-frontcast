@@ -32,8 +32,8 @@ class Student extends Person {
   }
 }
 
-const aliStudent = new Student("Ali", "ali@gmail.com", 23, ["Math"]);
-const mmdPerson = new Person("MMD", "mmd@gmail.com", 30);
+// const aliStudent = new Student("Ali", "ali@gmail.com", 23, ["Math"]);
+// const mmdPerson = new Person("MMD", "mmd@gmail.com", 30);
 
 console.log(aliStudent);
 aliStudent.lessons = "TS";
