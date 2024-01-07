@@ -46,31 +46,32 @@ class StudentA extends PersonA {
   }
 }
 
-class Teacher extends PersonA {
-  constructor(
-    name: string,
-    email: string,
-    age: number,
-    public subject: string
-  ) {
-    super(name, email, age);
-    this.subject = subject;
-  }
+// class Teacher extends PersonA {
+//   constructor(
+//     name: string,
+//     email: string,
+//     age: number,
+//     public subject: string
+//   ) {
+//     super(name, email, age);
+//     this.subject = subject;
+//   }
 
-  info(): string {
-    return `${this.name} Infos (Teacher) :))`;
-  }
-}
+//   info(): string {
+//     return `${this.name} Infos (Teacher) :))`;
+//   }
+// }
+
 
 const aliStudent = new StudentA("Ali", "ali@gmail.com", 23, ["Math"]);
 const amirStudent = new StudentA("Amir", "amir@gmail.com", 21, ["Math"]);
 const aminStudent = new StudentA("Amin", "amin@gmail.com", 22, ["Math"]);
 
-const keyvanTeacher = new Teacher("Keyvan", "keyvan@gmail.com", 21, "Security");
+// const keyvanTeacher = new Teacher("Keyvan", "keyvan@gmail.com", 21, "Security");
 
 // const aliPerson = new Person()
 
 // console.log(aliStudent.score);
 // console.log(Student.getCounts());
-console.log(aminStudent.info());
-console.log(keyvanTeacher.info());
+// console.log(aminStudent.info());
+// console.log(keyvanTeacher.info());
