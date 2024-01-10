@@ -19,7 +19,7 @@ class ListNoGen {
     private items: boolean[] | number[] | string[] = [];
 
     addItems(item: boolean | number | string) {
-        this.items.push(item);
+        // this.items.push(item);
         return true;
     }
 
