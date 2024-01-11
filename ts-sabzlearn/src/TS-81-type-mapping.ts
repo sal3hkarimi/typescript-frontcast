@@ -40,5 +40,5 @@ const amirInfo: readOnlyUserInfo<UserInfo> = {
 
 /* ------- 2 ------ */
 type NullableUser = {
-    [key in keyof UserInfo]: User[key] | null;
+    [key in keyof UserInfo]: UserInfo[key] | null;
 };
