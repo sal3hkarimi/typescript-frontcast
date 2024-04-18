@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-noCheck
 
 export const pow = (num) => num ** 2
 
